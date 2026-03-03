@@ -1,15 +1,15 @@
 /* Global styles */
 :root {
   --background: #1e1e2e;
-  --background-light: #fcebf3;
-  --button: #78c2ad;
+  --background-light: #ffff;
+  --button: #fa892d;
   --text: #eff1f5;
   --text-light: #1e1e2e;
-  --text-link: #78c2ad;
-  --text-link-light: #375a7f;
-  --underline: #375a7f;
-  --header: 'Pacifico', cursive;
-  --body: 'Josefin Sans', sans-serif;
+  --text-link: #fa892d;
+  --text-link-light: #fa892d;
+  --underline: #fa892d;
+  --header: "Pacifico", cursive;
+  --body: "Josefin Sans", sans-serif;
 }
 
 html {
@@ -74,19 +74,19 @@ li {
   text-align: right;
 }
 
-.navbar__title>a,
-.navbar__menu>a {
+.navbar__title > a,
+.navbar__menu > a {
   color: var(--text);
   text-decoration: none;
 }
 
-.navbar__menu>a {
+.navbar__menu > a {
   margin: 0 10px;
 }
 
-.navbar__title>a:hover,
-.navbar__menu>a:hover,
-.navbar__menu>a:focus {
+.navbar__title > a:hover,
+.navbar__menu > a:hover,
+.navbar__menu > a:focus {
   text-decoration: underline var(--underline);
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
@@ -105,7 +105,7 @@ li {
   border-radius: 6px;
   font-family: var(--body);
   font-weight: 600;
-  font-size: .85rem;
+  font-size: 0.85rem;
   padding: 0.3em 0.6em 0.2em;
 }
 
@@ -115,7 +115,7 @@ li {
   padding: 0;
 }
 
-.badge__list>li {
+.badge__list > li {
   margin-top: 10px;
 }
 
@@ -191,7 +191,9 @@ li {
   color: var(--text);
   font: 600 16px var(--body);
   padding: 8px 16px;
-  transition: background-color 0.4s, color 0.4s;
+  transition:
+    background-color 0.4s,
+    color 0.4s;
 }
 
 .btn:hover {
@@ -254,15 +256,15 @@ footer {
 }
 
 .git-icon {
-  content: url("/.netlify/images?url=/images/github-mark-white.svg");
+  content: url("/images/github-mark-white.svg");
 }
 
 .mail-icon {
-  content: url("/.netlify/images?url=/images/mail-white.svg");
+  content: url("/images/mail-white.svg");
 }
 
 .linked-in {
-  content: url("/.netlify/images?url=/images/li-in-white.png");
+  content: url("/images/li-in-white.png");
 }
 
 /* 404 */
@@ -280,7 +282,7 @@ footer {
 }
 
 .lost__body {
-  color: #5C5B77;
+  color: #5c5b77;
 }
 
 .lost__link {
@@ -294,11 +296,11 @@ html.light {
   color: var(--text-light);
 }
 
-.light .navbar__title>a {
+.light .navbar__title > a {
   color: var(--text-light);
 }
 
-.light .navbar__menu>a {
+.light .navbar__menu > a {
   color: var(--text-light);
 }
 
@@ -327,15 +329,15 @@ html.light {
 }
 
 .light .git-icon {
-  content: url("/.netlify/images?url=/images/github-mark.svg");
+  content: url("/images/github-mark.svg");
 }
 
 .light .mail-icon {
-  content: url("/.netlify/images?url=/images/mail.svg");
+  content: url("/images/mail.svg");
 }
 
 .light .linked-in {
-  content: url("/.netlify/images?url=/images/li-in.png");
+  content: url("/images/li-in.png");
 }
 
 .light .badge__link {
@@ -343,7 +345,7 @@ html.light {
 }
 
 .light .footer__link {
-  color: var(--text-link-light);	
+  color: var(--text-link-light);
 }
 
 .light .icon__link:hover {
@@ -368,7 +370,7 @@ html.light {
     text-align: center;
   }
 
-  .navbar__menu>a {
+  .navbar__menu > a {
     margin: 0 11px;
   }
 
