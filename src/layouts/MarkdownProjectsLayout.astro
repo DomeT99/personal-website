@@ -1,0 +1,52 @@
+---
+import BaseLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h2>{frontmatter.title}</h2>
+  <slot />
+  <ul class="badge__list">
+    {
+      frontmatter.platform != undefined && (
+        <li>
+          <span class="badge badge--item">PLATFORM</span>
+          {frontmatter.platform}
+        </li>
+      )
+    }
+    {
+      frontmatter.stack != undefined && (
+        <li>
+          <span class="badge badge--item">STACK</span>
+          {frontmatter.stack}
+        </li>
+      )
+    }
+
+    {
+      frontmatter.website != undefined && (
+        <li>
+          <>
+            <span class="badge badge--item">WEBSITE</span>
+            <a class="badge__link" href={frontmatter.website} target="_blank">
+              {frontmatter.website}
+            </a>
+          </>
+        </li>
+      )
+    }
+    {
+      frontmatter.github != undefined && (
+        <li>
+          <>
+            <span class="badge badge--item">GITHUB</span>
+            <a class="badge__link" href={frontmatter.github} target="_blank">
+              {frontmatter.github}
+            </a>
+          </>
+        </li>
+      )
+    }
+  </ul>
+</BaseLayout>

@@ -24,7 +24,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--header);
   font-weight: normal;
 }
@@ -43,6 +44,11 @@ h2 {
   margin-bottom: 0;
 }
 
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
 p {
   font-family: var(--body);
   font-size: 1.1rem;
@@ -54,6 +60,7 @@ p {
 small,
 li {
   font-family: var(--body);
+  line-height: 1.5;
 }
 
 /* Navigation Bar */
@@ -239,7 +246,8 @@ footer {
   margin: 4rem 0;
 }
 
-.footer__link {
+.footer__link,
+a {
   color: var(--text-link);
   text-decoration: none;
 }
