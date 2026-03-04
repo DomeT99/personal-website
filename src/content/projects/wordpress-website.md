@@ -2,7 +2,7 @@
 title: "Wordpress websites"
 description: "A series of websites developed using the popular open source CMS Wordpress."
 image:
-  url: "/images/GitHub.webp"
+  url: "/images/projects/WordpressWebsite.png"
   alt: "GitHub wallpaper"
 stack: Wordpress
 ---
