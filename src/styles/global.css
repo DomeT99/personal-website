@@ -54,7 +54,6 @@ p {
   font-size: 1.1rem;
   hyphens: auto;
   line-height: 1.5;
-  text-indent: 1rem;
 }
 
 small,
@@ -166,7 +165,7 @@ li {
 .card__title {
   margin: 0;
   font-family: var(--body);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
   text-align: center;
 }
