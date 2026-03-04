@@ -8,7 +8,7 @@
   --text-link: #fa892d;
   --text-link-light: #fa892d;
   --underline: #fa892d;
-  --header: "Pacifico", cursive;
+  --header: "Sofia Sans", cursive;
   --body: "Josefin Sans", sans-serif;
 }
 
@@ -60,12 +60,13 @@ li {
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar__title {
   font-family: var(--header);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .navbar__menu {
@@ -212,6 +213,18 @@ li {
 }
 
 /* Items */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 0.8s;
+}
+
 .center {
   text-align: center;
 }
@@ -350,6 +363,11 @@ html.light {
 
 .light .icon__link:hover {
   border-color: var(--text-link-light);
+}
+
+/*Images*/
+.profile__image {
+  border-radius: 50%;
 }
 
 /* Media Query */
