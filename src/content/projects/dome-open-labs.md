@@ -2,7 +2,7 @@
 title: "Domenico Tenace Open Labs"
 description: "Digital space, on Github, where ideas, projects, and resources are built and shared with the developer and creator community."
 image:
-  url: "/images/projects/OpenLabs.png"
+  url: "/images/projects/OpenLabs.webp"
   alt: "GitHub wallpaper"
 github: https://github.com/Domenico-Tenace-Open-Labs
 ---

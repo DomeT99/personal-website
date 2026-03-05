@@ -3,12 +3,11 @@ title: "Why I Switched to Mullvad VPN: The Open Source VPN"
 author: Domenico Tenace
 date: "2026-02-01"
 image:
-  url: "/images/posts/Why_I_Switched_To_Mullvad.png"
+  url: "/images/posts/Why_I_Switched_To_Mullvad.webp"
   alt: "Why I Switched to Mullvad VPN"
 ---
 
-  <img src="/images/posts/Why_I_Switched_To_Mullvad.png" role="presentation" class="post__image" decoding="async">
-
+  <img src="/images/posts/Why_I_Switched_To_Mullvad.webp" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 

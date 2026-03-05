@@ -3,11 +3,11 @@ title: "Planning vs Fast Mode in Google Antigravity: When and How to Use Each"
 author: Domenico Tenace
 date: "2026-02-03"
 image:
-  url: "/images/posts/Planning_Vs_Fast_Mode.png"
+  url: "/images/posts/Planning_Vs_Fast_Mode.webp"
   alt: "Planning vs Fast Mode in Google Antigravity"
 ---
 
-   <img src="/images/posts/Planning_Vs_Fast_Mode.png" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Planning_Vs_Fast_Mode.webp" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 

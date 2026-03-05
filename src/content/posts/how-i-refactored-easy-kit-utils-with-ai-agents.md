@@ -3,11 +3,11 @@ title: "My Experience with Google Antigravity: How I Refactored Easy Kit Utils w
 author: Domenico Tenace
 date: "2026-01-06"
 image:
-  url: "/images/posts/AI_Agents_Easy_kit_Utils.png"
+  url: "/images/posts/AI_Agents_Easy_kit_Utils.webp"
   alt: "How I Refactored Easy Kit Utils with AI Agents"
 ---
 
-  <img src="/images/posts/AI_Agents_Easy_kit_Utils.png" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/AI_Agents_Easy_kit_Utils.webp" role="presentation" class="post__image" decoding="async">
   
 ## Overview
 

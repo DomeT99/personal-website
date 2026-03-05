@@ -3,12 +3,11 @@ title: Google Antigravity vs GitHub Copilot - Why I'm Team Antigravity Now
 author: Domenico Tenace
 date: "2026-01-23"
 image:
-  url: "/images/posts/Antigravity_Vs_Copilot.png"
+  url: "/images/posts/Antigravity_Vs_Copilot.webp"
   alt: "Google Antigravity vs GitHub Copilot"
 ---
 
-  <img src="/images/posts/Antigravity_Vs_Copilot.png" role="presentation" class="post__image" decoding="async">
-
+  <img src="/images/posts/Antigravity_Vs_Copilot.webp" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 
