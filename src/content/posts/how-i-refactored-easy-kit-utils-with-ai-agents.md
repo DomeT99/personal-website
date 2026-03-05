@@ -7,10 +7,8 @@ image:
   alt: "How I Refactored Easy Kit Utils with AI Agents"
 ---
 
- <div class="gif">
-    <img src="/images/posts/AI_Agents_Easy_kit_Utils.png" role="presentation" width="550" height="259" decoding="async">
-  </div>
-
+  <img src="/images/posts/AI_Agents_Easy_kit_Utils.png" role="presentation" class="post__image" decoding="async">
+  
 ## Overview
 
 Hey everyone!

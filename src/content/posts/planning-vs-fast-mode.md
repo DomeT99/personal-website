@@ -7,9 +7,7 @@ image:
   alt: "Planning vs Fast Mode in Google Antigravity"
 ---
 
- <div class="gif">
-    <img src="/images/posts/Planning_Vs_Fast_Mode.png" role="presentation" width="550" height="259" decoding="async">
-  </div>
+   <img src="/images/posts/Planning_Vs_Fast_Mode.png" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 

@@ -379,7 +379,10 @@ html.light {
 .profile__image {
   border-radius: 50%;
 }
-
+.post__image {
+  width: 550px;
+  height: 259px;
+}
 /* Media Query */
 @media only screen and (max-width: 600px) {
   body {
@@ -416,5 +419,14 @@ html.light {
   .pro-img {
     height: auto;
     width: 350px;
+  }
+
+  .paragraph__general {
+    padding: 0.5rem;
+  }
+
+  .post__image {
+    width: 330px;
+    height: 190px;
   }
 }

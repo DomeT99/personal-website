@@ -7,9 +7,8 @@ image:
   alt: "Google Antigravity vs GitHub Copilot"
 ---
 
- <div class="gif">
-    <img src="/images/posts/Antigravity_Vs_Copilot.png" role="presentation" width="550" height="259" decoding="async">
-  </div>
+  <img src="/images/posts/Antigravity_Vs_Copilot.png" role="presentation" class="post__image" decoding="async">
+
 
 ## Overview
 
