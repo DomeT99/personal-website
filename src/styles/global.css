@@ -61,6 +61,9 @@ li {
   font-family: var(--body);
   line-height: 1.5;
 }
+blockquote {
+  font-style: italic;
+}
 
 /* Navigation Bar */
 .navbar {

@@ -1,7 +1,7 @@
 ---
 title: "My Experience with Google Antigravity: How I Refactored Easy Kit Utils with AI Agents"
 author: Domenico Tenace
-date: "01-07-2026"
+date: "2026-01-06"
 image:
   url: "/images/posts/AI_Agents_Easy_kit_Utils.png"
   alt: "How I Refactored Easy Kit Utils with AI Agents"

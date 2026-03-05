@@ -10,14 +10,19 @@ const pageTitle = "Posts";
   <h2>Blog</h2>
   <ul role="list" class="link-card-grid">
     {
-      allPosts.map((cardPost) => (
-        <Card
-          url={`/posts/${cardPost.id}/`}
-          image={cardPost.data.image!.url}
-          title={cardPost.data.title}
-          date={cardPost.data.date}
-        />
-      ))
+      allPosts
+        .sort(
+          (a, b) =>
+            new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+        )
+        .map((cardPost) => (
+          <Card
+            url={`/posts/${cardPost.id}/`}
+            image={cardPost.data.image!.url}
+            title={cardPost.data.title}
+            date={cardPost.data.date}
+          />
+        ))
     }
   </ul>
 </Layout>
