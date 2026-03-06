@@ -164,8 +164,7 @@ a {
   font-size: 1.5rem;
 }
 .pagination-link.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  display: none;
 }
 
 /* Cards */

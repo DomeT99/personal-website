@@ -3,11 +3,11 @@ title: "Building Plus Ultra: How Antigravity Helped Me Bring Material Design to 
 author: Domenico Tenace
 date: "2026-02-12"
 image:
-  url: "/images/posts/Building_Plus_Ultra.png"
+  url: "/images/posts/Building_Plus_Ultra.webp"
   alt: "Planning vs Fast Mode in Google Antigravity"
 ---
 
-   <img src="/images/posts/Building_Plus_Ultra.png" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Building_Plus_Ultra.webp" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 

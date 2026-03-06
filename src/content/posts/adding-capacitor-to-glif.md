@@ -3,11 +3,11 @@ title: "Adding Capacitor to Glif with Antigravity: The Good, The Bad, and The Re
 author: Domenico Tenace
 date: "2026-02-26"
 image:
-  url: "/images/posts/Adding_Capacitor_To_Glif.png"
+  url: "/images/posts/Adding_Capacitor_To_Glif.webp"
   alt: "Adding Capacitor to Glif with Antigravity"
 ---
 
-   <img src="/images/posts/Adding_Capacitor_To_Glif.png" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Adding_Capacitor_To_Glif.webp" role="presentation" class="post__image" decoding="async">
 
 ## Overview
 
