@@ -43,7 +43,7 @@ The web version works fine, but a native mobile app would be the natural evoluti
 
 ## The Plan: Let Antigravity Handle It
 
-I've had good experiences using Antigravity for frontend work ([I literally built an entire Material Design CSS library with it](/posts/building-plus-ultra/)), so I was optimistic. My thinking was:
+I've had good experiences using Antigravity for frontend work ([I literally built an entire Material Design CSS library with it](/blog/building-plus-ultra/)), so I was optimistic. My thinking was:
 
 - Capacitor integration is well-documented
 - It's mostly configuration and boilerplate

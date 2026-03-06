@@ -14,7 +14,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 const p = page as unknown as any;
 
-const pageTitle = "Domenico Tenace - Posts";
+const pageTitle = "Domenico Tenace - Blog";
 const pageDescription =
   "I write articles about the technologies I use the most and share my experiences";
 ---
@@ -25,7 +25,7 @@ const pageDescription =
     {
       p.data.map((cardPost: any) => (
         <Card
-          url={`/posts/${cardPost.id}/`}
+          url={`/blog/${cardPost.id}/`}
           image={cardPost.data.image!.url}
           title={cardPost.data.title}
           date={cardPost.data.date}

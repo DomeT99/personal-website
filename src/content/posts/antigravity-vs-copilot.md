@@ -15,7 +15,7 @@ Hey everyone
 
 If you've been following the AI coding tools space lately, you've probably noticed things are getting wild. We went from "whoa, AI can autocomplete my code!" to "wait, AI can literally build entire features while I grab coffee?" in what feels like about five minutes.
 
-Today I want to talk about two tools that represent this evolution: **GitHub Copilot** and **Google Antigravity**. I've used both extensively, and after recently completing a major refactoring project with Antigravity (which I wrote about [here](/posts/how-i-refactored-easy-kit-utils-with-ai-agents/)), I have some thoughts on how they compare and why one has completely changed how I work.
+Today I want to talk about two tools that represent this evolution: **GitHub Copilot** and **Google Antigravity**. I've used both extensively, and after recently completing a major refactoring project with Antigravity (which I wrote about [here](/blog/how-i-refactored-easy-kit-utils-with-ai-agents/)), I have some thoughts on how they compare and why one has completely changed how I work.
 
 Spoiler alert: I'm firmly in Team Antigravity now, but it's not because Copilot is bad, it's because they're solving fundamentally different problems. Let me break it down.
 
@@ -223,7 +223,7 @@ By investing time in learning Antigravity now, I'm positioning myself for the ne
 
 ## My Real-World Experience: The Easy Kit Utils Refactoring
 
-I detailed this extensively in [my previous article](/posts/how-i-refactored-easy-kit-utils-with-ai-agents/), but here's the short version:
+I detailed this extensively in [my previous article](/blog/how-i-refactored-easy-kit-utils-with-ai-agents/), but here's the short version:
 
 I used Antigravity to completely refactor Easy Kit Utils, a JavaScript utility library. The project needed modernization: updating to ES6+ syntax, adding TypeScript definitions, improving test coverage, and cleaning up accumulated technical debt.
 
