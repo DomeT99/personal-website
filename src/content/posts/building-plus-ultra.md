@@ -11,17 +11,17 @@ image:
 
 ## Overview
 
-Hey everyone 👋
+Hey everyone
 
 Today I want to share something I've been working on that combines two things I love: clean CSS frameworks and Material Design aesthetics. I just launched [**Plus Ultra**](https://github.com/Domenico-Tenace-Open-Labs/plus-ultra), an open-source CSS library that brings Material Design components to [Bulma CSS](https://bulma.io/) while keeping all the flexbox goodness that makes Bulma so powerful.
 
 And here's the kicker: I built most of it using Google Antigravity, which turned out to be an absolute beast for frontend work. If you're wondering whether Antigravity is any good for UI development, let me tell you, it's incredible.
 
-Let's start! 🤙
+Let's start!
 
 ---
 
-## What Is Plus Ultra? 🚀
+## What Is Plus Ultra?
 
 First, let me explain what Plus Ultra actually is and why I built it.
 
@@ -49,12 +49,12 @@ The key is that it's built **on top of** Bulma, not instead of it. You still get
 
 ### Why "Plus Ultra"?
 
-The name comes from one of my all-time favorite anime series: [_My Hero Academia_](https://en.wikipedia.org/wiki/My_Hero_Academia) 😄
+The name comes from one of my all-time favorite anime series: [_My Hero Academia_](https://en.wikipedia.org/wiki/My_Hero_Academia)
 "Plus Ultra" is actually a Latin Phrase. It translates to "Further Beyond." In My Hero Academia, it has been adopted as the school motto of U.A. High.
 
 ---
 
-## The Tech Stack 💻
+## The Tech Stack
 
 Let me break down what Plus Ultra is built with:
 
@@ -81,7 +81,7 @@ The beauty is that it's just CSS. No complicated build process, no JavaScript ru
 
 ---
 
-## How Antigravity Changed Everything ⚡
+## How Antigravity Changed Everything
 
 Now here's where it gets interesting. I could have built Plus Ultra the old-fashioned way, manually writing Sass, testing in the browser, iterating on designs. But I decided to use Google Antigravity, and honestly, it transformed the entire development process.
 
@@ -187,7 +187,7 @@ I could review the plan, suggest adjustments (like "use Bulma's existing spacing
 
 ---
 
-## What I Learned About Antigravity for Frontend 🧠
+## What I Learned About Antigravity for Frontend
 
 After building Plus Ultra with Antigravity, here are my takeaways:
 
@@ -211,7 +211,7 @@ For a library like Plus Ultra where consistency is crucial, Planning mode's upfr
 
 ---
 
-## The Current State and What's Next 🌟
+## The Current State and What's Next
 
 Plus Ultra is currently in early development. The foundation is there, core Material components working on top of Bulma, but there's still work to do.
 
@@ -239,7 +239,7 @@ And yes, I'll be continuing to use Antigravity for development. It's been too ef
 
 ---
 
-## Why Open Source? 🌍
+## Why Open Source?
 
 You might wonder why I'm building this as an open-source project instead of keeping it proprietary.
 

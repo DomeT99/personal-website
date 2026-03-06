@@ -67,6 +67,7 @@ blockquote {
 a {
   cursor: pointer;
 }
+
 /* Navigation Bar */
 .navbar {
   display: grid;
@@ -214,35 +215,6 @@ a {
   padding: 0;
 }
 
-/* Button */
-.btn {
-  text-align: center;
-  background: rgba(0, 0, 0, 0);
-  border: 2px solid var(--button);
-  border-radius: 8px;
-  color: var(--text);
-  font: 600 16px var(--body);
-  padding: 8px 16px;
-  transition:
-    background-color 0.4s,
-    color 0.4s;
-}
-
-.btn:hover {
-  background-color: var(--button);
-  color: var(--text-light);
-  cursor: pointer;
-}
-
-/* Skills */
-.skills {
-  margin-top: 8px;
-}
-
-.skills__img {
-  margin: 8px 4px;
-}
-
 /* Items */
 @keyframes fade-in {
   0% {
@@ -351,14 +323,6 @@ html.light {
 
 .light .card__txt {
   color: var(--text-light);
-}
-
-.light .btn {
-  color: var(--text-light);
-}
-
-.light .btn:hover {
-  color: var(--text);
 }
 
 .light .icon__link {
