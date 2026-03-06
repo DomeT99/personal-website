@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/CardPost.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection("posts");
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+  );
+  return paginate(sortedPosts, { pageSize: 4 });
+}
+
+const { page } = Astro.props;
+const p = page as unknown as any;
+
+const pageTitle = "Posts";
+---
+
+<Layout pageTitle={pageTitle}>
+  <h2>Blog</h2>
+  <ul role="list" class="link-card-grid">
+    {
+      p.data.map((cardPost: any) => (
+        <Card
+          url={`/posts/${cardPost.id}/`}
+          image={cardPost.data.image!.url}
+          title={cardPost.data.title}
+          date={cardPost.data.date}
+        />
+      ))
+    }
+  </ul>
+
+  {
+    (p.url.prev || p.url.next) && (
+      <nav aria-label="Pagination" class="pagination">
+        {p.url.prev ? (
+          <a href={p.url.prev} class="pagination-link">
+            &larr; Past
+          </a>
+        ) : (
+          <span class="pagination-link disabled">&larr; Past</span>
+        )}
+        {p.url.next ? (
+          <a href={p.url.next} class="pagination-link">
+            Next &rarr;
+          </a>
+        ) : (
+          <span class="pagination-link disabled">Next &rarr;</span>
+        )}
+      </nav>
+    )
+  }
+</Layout>
