@@ -4,9 +4,10 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 const allProjects = await getCollection("projects");
 const pageTitle = "Projects";
+const pageDescription = "Section dedicated to my personal projects";
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
   <h2>Projects</h2>
   <ul role="list" class="link-card-grid">
     {

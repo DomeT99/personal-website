@@ -15,9 +15,11 @@ const { page } = Astro.props;
 const p = page as unknown as any;
 
 const pageTitle = "Posts";
+const pageDescription =
+  "I write articles about the technologies I use the most and share my experiences";
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
   <h2>Blog</h2>
   <ul role="list" class="link-card-grid">
     {

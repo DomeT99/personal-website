@@ -3,7 +3,10 @@ import BaseLayout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout
+  pageTitle={frontmatter.title}
+  pageDescription={frontmatter.description}
+>
   <h2 style="text-decoration:none;">{frontmatter.title}</h2>
   <ul class="badge__list">
     <li>
