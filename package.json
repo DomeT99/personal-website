@@ -6,10 +6,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.18",
     "astro": "^5.5.4"
   }
 }

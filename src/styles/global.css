@@ -280,6 +280,10 @@ a {
   content: url("/images/li-in-white.webp");
 }
 
+.rss-icon {
+  content: url("/images/rss-white.webp");
+}
+
 /* 404 */
 .lost {
   margin-top: 30%;
@@ -339,6 +343,10 @@ html.light {
 
 .light .linked-in {
   content: url("/images/li-in.webp");
+}
+
+.light .rss-icon {
+  content: url("/images/rss.webp");
 }
 
 .light .badge__link {
