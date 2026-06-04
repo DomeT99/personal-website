@@ -5,7 +5,9 @@ import Card from "../../components/CardPost.astro";
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection("posts");
-  const sortedPosts = allPosts.sort(
+  const sortedPosts = allPosts
+  .filter((post) => new Date(post.data.date).valueOf() < new Date().valueOf())
+  .sort(
     (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
   );
   return paginate(sortedPosts, { pageSize: 2 });
