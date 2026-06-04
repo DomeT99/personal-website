@@ -9,7 +9,9 @@ export const GET: APIRoute = async (context) => {
     title: 'Domenico Tenace - Software Developer',
     description: 'Software developer passionate about the IT world and everything related to it',
     site: context.site ?? 'https://domenicotenace.dev',
-    items: posts.map((post) => ({
+    items: posts
+    .filter((post) => new Date(post.data.date).valueOf() < new Date().valueOf())
+    .map((post) => ({
       title: post.data.title,
       pubDate: new Date(post.data.date),
       link: `/blog/${post.id}/`,
