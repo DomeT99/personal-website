@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "./Layout.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  frontmatter: CollectionEntry<"posts">["data"] & { description?: string };
+}
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -18,3 +24,4 @@ const { frontmatter } = Astro.props;
   </ul>
   <slot />
 </BaseLayout>
+

@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "./Layout.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  frontmatter: CollectionEntry<"projects">["data"];
+}
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -11,7 +17,7 @@ const { frontmatter } = Astro.props;
   <slot />
   <ul class="badge__list">
     {
-      frontmatter.platform != undefined && (
+      frontmatter.platform !== undefined && (
         <li>
           <span class="badge badge--item">PLATFORM</span>
           {frontmatter.platform}
@@ -19,7 +25,7 @@ const { frontmatter } = Astro.props;
       )
     }
     {
-      frontmatter.stack != undefined && (
+      frontmatter.stack !== undefined && (
         <li>
           <span class="badge badge--item">STACK</span>
           {frontmatter.stack}
@@ -28,28 +34,25 @@ const { frontmatter } = Astro.props;
     }
 
     {
-      frontmatter.website != undefined && (
+      frontmatter.website !== undefined && (
         <li>
-          <>
-            <span class="badge badge--item">WEBSITE</span>
-            <a class="badge__link" href={frontmatter.website} target="_blank">
-              {frontmatter.website}
-            </a>
-          </>
+          <span class="badge badge--item">WEBSITE</span>
+          <a class="badge__link" href={frontmatter.website} target="_blank">
+            {frontmatter.website}
+          </a>
         </li>
       )
     }
     {
-      frontmatter.github != undefined && (
+      frontmatter.github !== undefined && (
         <li>
-          <>
-            <span class="badge badge--item">GITHUB</span>
-            <a class="badge__link" href={frontmatter.github} target="_blank">
-              {frontmatter.github}
-            </a>
-          </>
+          <span class="badge badge--item">GITHUB</span>
+          <a class="badge__link" href={frontmatter.github} target="_blank">
+            {frontmatter.github}
+          </a>
         </li>
       )
     }
   </ul>
 </BaseLayout>
+

@@ -1,9 +1,11 @@
 ---
 import { getCollection } from "astro:content";
+import type { Page, GetStaticPathsOptions } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/CardPost.astro";
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("posts");
   const sortedPosts = allPosts
   .filter((post) => new Date(post.data.date).valueOf() < new Date().valueOf())
@@ -13,8 +15,11 @@ export async function getStaticPaths({ paginate }) {
   return paginate(sortedPosts, { pageSize: 2 });
 }
 
+interface Props {
+  page: Page<CollectionEntry<"posts">>;
+}
+
 const { page } = Astro.props;
-const p = page as unknown as any;
 
 const pageTitle = "Domenico Tenace - Blog";
 const pageDescription =
@@ -25,10 +30,10 @@ const pageDescription =
   <h2>Blog</h2>
   <ul role="list" class="link-card-grid">
     {
-      p.data.map((cardPost: any) => (
+      page.data.map((cardPost) => (
         <Card
           url={`/blog/${cardPost.id}/`}
-          image={cardPost.data.image!.url}
+          image={cardPost.data.image?.url ?? "/images/OG_Image.webp"}
           title={cardPost.data.title}
           date={cardPost.data.date}
         />
@@ -37,17 +42,17 @@ const pageDescription =
   </ul>
 
   {
-    (p.url.prev || p.url.next) && (
+    (page.url.prev || page.url.next) && (
       <nav aria-label="Pagination" class="pagination">
-        {p.url.prev ? (
-          <a href={p.url.prev} class="pagination-link">
+        {page.url.prev ? (
+          <a href={page.url.prev} class="pagination-link">
             &larr; Past
           </a>
         ) : (
           <span class="pagination-link disabled">&larr; Past</span>
         )}
-        {p.url.next ? (
-          <a href={p.url.next} class="pagination-link">
+        {page.url.next ? (
+          <a href={page.url.next} class="pagination-link">
             Next &rarr;
           </a>
         ) : (
@@ -57,3 +62,4 @@ const pageDescription =
     )
   }
 </Layout>
+

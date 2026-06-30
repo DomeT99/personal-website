@@ -7,6 +7,12 @@ interface Props {
 }
 
 const { url, image, title, date } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
 ---
 
 <li class="card">
@@ -25,5 +31,9 @@ const { url, image, title, date } = Astro.props;
         <h3 class="card__title">
             {title}
         </h3>
+        <p class="card__txt">
+            <time datetime={date}>{formattedDate}</time>
+        </p>
     </a>
 </li>
+

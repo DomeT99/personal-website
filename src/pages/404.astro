@@ -1,11 +1,12 @@
 ---
-const description = "404";
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "404 - Page Not Found";
+const pageDescription = "It seems like you've wandered into the wrong forest!";
 ---
 
-<layout>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
   <div class="lost">
-    <h1 class="lost__header">{description}</h1>
+    <h1 class="lost__header">404</h1>
     <p class="lost__body">
       It seems like you've wandered into the wrong forest!
     </p>
@@ -13,4 +14,4 @@ import "../styles/global.css";
       <a class="lost__link" href="/">Return Home</a>
     </p>
   </div>
-</layout>
+</Layout>

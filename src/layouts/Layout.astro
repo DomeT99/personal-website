@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 const { pageTitle, pageDescription } = Astro.props;
 const ogImage = new URL("/images/OG_Image.png", Astro.site).toString();
@@ -9,7 +10,9 @@ const ogImage = new URL("/images/OG_Image.png", Astro.site).toString();
 <!doctype html>
 <html lang="en">
   <head>
+    <ClientRouter />
     <meta charset="utf-8" />
+
     <title>{pageTitle}</title>
     <meta
       name="description"
@@ -35,19 +38,33 @@ const ogImage = new URL("/images/OG_Image.png", Astro.site).toString();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       as="style"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.cdnfonts.com/css/sifonn" rel="stylesheet" />
     <link rel="me" href="https://mastodon.uno/@dvalin99" />
     <link rel="alternate" type="application/rss+xml" title="Domenico Tenace - Blog RSS Feed" href="/rss.xml" />
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          return "light";
+        }
+        return "dark";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.add("light");
+      } else {
+        document.documentElement.classList.remove("light");
+      }
+    </script>
   </head>
   <body>
     <Header />
@@ -68,8 +85,8 @@ const ogImage = new URL("/images/OG_Image.png", Astro.site).toString();
         }
       }
 
-      colorMode();
       document.addEventListener("astro:after-swap", colorMode);
     </script>
   </body>
 </html>
+
