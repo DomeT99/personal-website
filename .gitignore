@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # public folder
 public/convert-to-webp.sh
+
+AGENTS.original.md
