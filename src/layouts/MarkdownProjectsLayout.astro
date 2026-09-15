@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
   pageTitle={frontmatter.title}
   pageDescription={frontmatter.description}
 >
-  <h2>{frontmatter.title}</h2>
+  <h1 class="page-title">{frontmatter.title}</h1>
   <slot />
   <ul class="badge__list">
     {
@@ -37,7 +37,7 @@ const { frontmatter } = Astro.props;
       frontmatter.website !== undefined && (
         <li>
           <span class="badge badge--item">WEBSITE</span>
-          <a class="badge__link" href={frontmatter.website} target="_blank">
+          <a class="badge__link" href={frontmatter.website} target="_blank" rel="noopener noreferrer">
             {frontmatter.website}
           </a>
         </li>
@@ -47,7 +47,7 @@ const { frontmatter } = Astro.props;
       frontmatter.github !== undefined && (
         <li>
           <span class="badge badge--item">GITHUB</span>
-          <a class="badge__link" href={frontmatter.github} target="_blank">
+          <a class="badge__link" href={frontmatter.github} target="_blank" rel="noopener noreferrer">
             {frontmatter.github}
           </a>
         </li>

@@ -2,7 +2,7 @@
 
 ---
 
-<button id="themeToggle" title="Theme Toggle">
+<button id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
   <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
       class="sun"
@@ -22,9 +22,16 @@
     background: none;
   }
 
-  #themeToggle:hover {
+  #themeToggle:hover,
+  #themeToggle:focus-visible {
     cursor: pointer;
     rotate: 10deg;
+  }
+
+  #themeToggle:focus-visible {
+    outline: 2px solid var(--button);
+    outline-offset: 4px;
+    border-radius: 4px;
   }
 
   .moon {
@@ -39,6 +46,13 @@
   }
   :global(.light) .sun {
     fill: #1e1e2e;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #themeToggle:hover,
+    #themeToggle:focus-visible {
+      rotate: 0deg;
+    }
   }
 </style>
 <script>

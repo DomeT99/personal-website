@@ -1,5 +1,8 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro";
+const { pathname } = Astro.url;
+const isProjects = pathname.startsWith("/projects");
+const isBlog = pathname.startsWith("/blog");
 ---
 
 <div class="navbar">
@@ -7,8 +10,8 @@ import ThemeIcon from "./ThemeIcon.astro";
     <a href="/">Domenico Tenace</a>
   </div>
   <div class="navbar__menu">
-    <a href="/projects/">Projects</a>
-    <a href="/blog/">Blog</a>
+    <a href="/projects/" aria-current={isProjects ? "page" : undefined}>Projects</a>
+    <a href="/blog/" aria-current={isBlog ? "page" : undefined}>Blog</a>
     <ThemeIcon />
   </div>
 </div>

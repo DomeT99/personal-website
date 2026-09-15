@@ -21,19 +21,16 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
             <img
                 class="card__img"
                 src={image}
-                role="presentation"
+                alt={title}
                 width="226"
                 height="127"
                 loading="lazy"
                 decoding="async"
             />
         </div>
-        <h3 class="card__title">
-            {title}
-        </h3>
+        <h3 class="card__title">{title}</h3>
         <p class="card__txt">
             <time datetime={date}>{formattedDate}</time>
         </p>
     </a>
 </li>
-

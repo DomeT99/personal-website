@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
   pageTitle={frontmatter.title}
   pageDescription={frontmatter.description}
 >
-  <h2 style="text-decoration:none;">{frontmatter.title}</h2>
+  <h1 class="post__title">{frontmatter.title}</h1>
   <ul class="badge__list">
     <li>
       <span class="badge badge--item">AUTHOR</span>{frontmatter.author}
