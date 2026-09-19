@@ -23,4 +23,5 @@ I also like to think of it as a shared space where people can experiment with ne
 - [Uno Counter App](https://github.com/Domenico-Tenace-Open-Labs/UnoCounterApp): simple counter app made with Uno Platform to try the new feature Hot Design.
 - [Astro Minimal](https://github.com/Domenico-Tenace-Open-Labs/astro-minimal): an open source blog template build with Astro and Bulma.
 - [Pure Astro](https://github.com/Domenico-Tenace-Open-Labs/pure-astro): an open source blog template build with Astro and pure CSS.
-- [Spellbook of Prompts](https://github.com/Domenico-Tenace-Open-Labs/spellbook-of-prompt): a collection of prompts designed to automate various processes.
+- [Spellbook of Prompt](https://github.com/Domenico-Tenace-Open-Labs/spellbook-of-prompt): a collection of prompts designed to automate various processes.
+- [Spellbook of Skill](https://github.com/Domenico-Tenace-Open-Labs/spellbook-of-skill): a collection of development skills designed to automate various processes.
