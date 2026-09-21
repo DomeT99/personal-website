@@ -1,5 +1,6 @@
 ---
 title: Why I Switched to pnpm and Never Looked Back
+description: "After years on npm, I switched to pnpm and can't imagine going back. Why it's faster, what pnpm's content-addressable store changes, and why it matters."
 author: Domenico Tenace
 date: "2026-03-19"
 image:

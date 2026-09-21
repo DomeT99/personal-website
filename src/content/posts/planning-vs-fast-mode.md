@@ -1,5 +1,6 @@
 ---
 title: "Planning vs Fast Mode in Google Antigravity: When and How to Use Each"
+description: "Google Antigravity's Planning and Fast modes aren't just speeds. Here's when to use each to avoid surprises and get the best results."
 author: Domenico Tenace
 date: "2026-02-03"
 image:

@@ -1,5 +1,6 @@
 ---
 title: "Amodei Says Slow Down. Should We Believe Him?"
+description: "Dario Amodei wants the AI industry to slow down. A look at his argument, who agreed with him, and whether the call to decelerate holds up."
 author: Domenico Tenace
 date: "2026-09-15"
 image:

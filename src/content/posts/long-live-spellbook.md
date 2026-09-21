@@ -1,5 +1,6 @@
 ---
 title: Daily Prompt Is Out. Long Live Spellbook of Prompt
+description: "How a messy personal collection of AI prompts grew into Spellbook of Prompt, a curated prompt library I'm now proud to share."
 author: Domenico Tenace
 date: "2026-07-06"
 image:

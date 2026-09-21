@@ -2,10 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "Domenico Tenace - Software Developer";
 const pageDescription =
-  "Software developer passionate about the IT world and everything related to it";
+  "Software developer based in Italy with 5+ years of experience building backend services in C# and .NET, plus interfaces in Vue and Nuxt.";
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Domenico Tenace",
+    url: "https://domenicotenace.dev/",
+    jobTitle: "Software Developer",
+    sameAs: [
+      "https://github.com/DomeT99",
+      "https://www.linkedin.com/in/domenico-tenace/",
+      "https://mastodon.uno/@dvalin99",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Domenico Tenace",
+    url: "https://domenicotenace.dev/",
+  },
+];
 ---
 
-<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription} structuredData={structuredData}>
   <div class="gif">
     <img
       src="/images/profile.webp"

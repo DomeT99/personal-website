@@ -1,5 +1,6 @@
 ---
 title: Gemini CLI - Google's Free AI Agent for Your Terminal
+description: "Gemini CLI brings a free, open source AI agent straight into your terminal. Here's what it can do and how to get started."
 author: Domenico Tenace
 date: "2026-05-12"
 image:

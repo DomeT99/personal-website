@@ -1,5 +1,6 @@
 ---
-title: SpellBook of Skill:The Twin Project Nobody Asked For, But I Built Anyway
+title: "Spellbook of Skill: The Twin Project Nobody Asked For, But I Built Anyway"
+description: "Prompts are only half the story. Meet Spellbook of Skill, the skills companion to Spellbook of Prompt that I built anyway."
 author: Domenico Tenace
 date: "2026-09-21"
 image:

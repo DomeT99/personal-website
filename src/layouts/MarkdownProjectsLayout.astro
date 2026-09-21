@@ -3,15 +3,35 @@ import BaseLayout from "./Layout.astro";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  frontmatter: CollectionEntry<"projects">["data"];
+  entry: CollectionEntry<"projects">;
 }
 
-const { frontmatter } = Astro.props;
+const { entry } = Astro.props;
+const frontmatter = entry.data;
+
+const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://domenicotenace.dev";
+const url = `${baseUrl}/projects/${entry.id}/`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: frontmatter.title,
+  description: frontmatter.description,
+  author: {
+    "@type": "Person",
+    name: "Domenico Tenace",
+    url: "https://domenicotenace.dev/",
+  },
+  ...(frontmatter.github && { codeRepository: frontmatter.github }),
+  ...(frontmatter.website && { url: frontmatter.website }),
+};
 ---
 
 <BaseLayout
-  pageTitle={frontmatter.title}
+  pageTitle={`${frontmatter.title} - Domenico Tenace`}
   pageDescription={frontmatter.description}
+  canonicalURL={url}
+  structuredData={structuredData}
 >
   <h1 class="page-title">{frontmatter.title}</h1>
   <slot />
@@ -55,4 +75,3 @@ const { frontmatter } = Astro.props;
     }
   </ul>
 </BaseLayout>
-

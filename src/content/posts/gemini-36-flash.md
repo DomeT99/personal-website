@@ -1,5 +1,6 @@
 ---
 title: "Gemini 3.6 Flash: Google's Fastest Bet in a Crowded Race"
+description: "Gemini 3.6 Flash quietly improves on 3.5 Flash while getting cheaper and faster. Here's what changed and why it matters."
 author: Domenico Tenace
 date: "2026-07-29"
 image:

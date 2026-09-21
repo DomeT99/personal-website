@@ -1,5 +1,6 @@
 ---
 title: "OpenCode + DeepSeek V4: The Budget Combo That Doesn't Feel Like a Budget Combo"
+description: "I've been running OpenCode wired to DeepSeek V4 as my default daily setup. Here's why I rarely miss Claude or GPT for everyday tasks."
 author: Domenico Tenace
 date: "2026-09-01"
 image:

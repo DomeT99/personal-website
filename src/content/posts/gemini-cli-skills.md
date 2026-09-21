@@ -1,5 +1,6 @@
 ---
 title: Gemini CLI Skills - Teaching Your Terminal Agent How to Think 🧠
+description: "Skills give Gemini CLI structured guidance for specific workflows. Here's how they work and how to teach your terminal agent new ones."
 author: Domenico Tenace
 date: "2026-05-26"
 image:

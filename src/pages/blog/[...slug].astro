@@ -20,7 +20,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<MarkdownPostsLayout frontmatter={entry.data}>
+<MarkdownPostsLayout entry={entry}>
   <Content />
 </MarkdownPostsLayout>
 

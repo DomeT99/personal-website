@@ -3,15 +3,47 @@ import BaseLayout from "./Layout.astro";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  frontmatter: CollectionEntry<"posts">["data"] & { description?: string };
+  entry: CollectionEntry<"posts">;
 }
 
-const { frontmatter } = Astro.props;
+const { entry } = Astro.props;
+const frontmatter = entry.data;
+const { title, date, image, description } = frontmatter;
+
+const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://domenicotenace.dev";
+const url = `${baseUrl}/blog/${entry.id}/`;
+const published = new Date(date).toISOString();
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  datePublished: published,
+  dateModified: published,
+  author: {
+    "@type": "Person",
+    name: "Domenico Tenace",
+    url: "https://domenicotenace.dev/",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Domenico Tenace",
+    url: "https://domenicotenace.dev/",
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": url,
+  },
+  image: image?.url ? `${baseUrl}${image.url}` : `${baseUrl}/images/OG_Image.webp`,
+};
 ---
 
 <BaseLayout
   pageTitle={frontmatter.title}
-  pageDescription={frontmatter.description}
+  pageDescription={description}
+  ogType="article"
+  canonicalURL={url}
+  structuredData={structuredData}
 >
   <h1 class="post__title">{frontmatter.title}</h1>
   <ul class="badge__list">
@@ -19,9 +51,8 @@ const { frontmatter } = Astro.props;
       <span class="badge badge--item">AUTHOR</span>{frontmatter.author}
     </li>
     <li>
-      <span class="badge badge--item">PUBLISHED</span>{frontmatter.date}
+      <span class="badge badge--item">PUBLISHED</span><time datetime={frontmatter.date}>{frontmatter.date}</time>
     </li>
   </ul>
   <slot />
 </BaseLayout>
-

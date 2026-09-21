@@ -1,5 +1,6 @@
 ---
 title: "Why I Switched to Mullvad VPN: The Open Source VPN"
+description: "Why I moved to Mullvad VPN and how it changed my approach to online privacy, from no-account signups to real anonymity."
 author: Domenico Tenace
 date: "2026-02-01"
 image:

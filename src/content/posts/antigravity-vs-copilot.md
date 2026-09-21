@@ -1,5 +1,6 @@
 ---
 title: Google Antigravity vs GitHub Copilot - Why I'm Team Antigravity Now
+description: "A hands-on comparison of Google Antigravity and GitHub Copilot, and why I switched teams after using both to build real features."
 author: Domenico Tenace
 date: "2026-01-23"
 image:

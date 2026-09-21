@@ -26,6 +26,7 @@ const postsCollection = defineCollection({
     title: z.string(),
     author: z.string(),
     date: z.string(),
+    description: z.string().optional(),
     image: z
       .object({
         url: z.string(),

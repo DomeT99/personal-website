@@ -1,5 +1,6 @@
 ---
 title: "OpenCode: The Open Source Coding Agent That Doesn't Lock You In"
+description: "OpenCode is an open-source coding agent that lets you see what's happening under the hood and swap models without switching tools."
 author: Domenico Tenace
 date: "2026-08-05"
 image:

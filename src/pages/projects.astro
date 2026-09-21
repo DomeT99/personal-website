@@ -4,10 +4,16 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 const allProjects = await getCollection("projects");
 const pageTitle = "Domenico Tenace - Projects";
-const pageDescription = "Section dedicated to my personal projects";
+const pageDescription = "Open source projects built and shared by Domenico Tenace: tooling, libraries, and websites for developers.";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Projects",
+  url: "https://domenicotenace.dev/projects/",
+};
 ---
 
-<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription} structuredData={structuredData}>
   <h1 class="page-title">Projects</h1>
   <ul role="list" class="link-card-grid">
     {

@@ -21,12 +21,23 @@ interface Props {
 
 const { page } = Astro.props;
 
-const pageTitle = "Domenico Tenace - Blog";
+const baseTitle = "Domenico Tenace - Blog";
+const pageTitle =
+  page.currentPage > 1 ? `${baseTitle} - Page ${page.currentPage}` : baseTitle;
 const pageDescription =
-  "I write articles about the technologies I use the most and share my experiences";
+  page.currentPage > 1
+    ? `Blog articles about programming, AI, and developer tools - page ${page.currentPage}`
+    : "I write articles about the technologies I use the most and share my experiences";
+
+const baseUrl = new URL(page.url.first ?? "/blog/", Astro.site ?? "https://domenicotenace.dev").toString();
+const canonicalURL =
+  page.currentPage > 1
+    ? `${baseUrl.replace(/\/$/, "")}/${page.currentPage}/`
+    : baseUrl;
+const shouldCanonical = page.currentPage > 1;
 ---
 
-<Layout pageTitle={pageTitle} pageDescription={pageDescription}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription} canonicalURL={shouldCanonical ? canonicalURL : undefined}>
   <h1 class="page-title">Blog</h1>
   <ul role="list" class="link-card-grid">
     {

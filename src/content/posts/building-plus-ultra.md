@@ -1,5 +1,6 @@
 ---
 title: "Building Plus Ultra: How Antigravity Helped Me Bring Material Design to Bulma CSS"
+description: "How I built Plus Ultra, a open-source CSS library that brings Material Design components to Bulma, with a big assist from Google Antigravity."
 author: Domenico Tenace
 date: "2026-02-12"
 image:

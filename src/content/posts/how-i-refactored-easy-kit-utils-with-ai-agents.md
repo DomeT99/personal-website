@@ -1,5 +1,6 @@
 ---
 title: "My Experience with Google Antigravity: How I Refactored Easy Kit Utils with AI Agents"
+description: "I used Google Antigravity to completely refactor Easy Kit Utils. My honest take on the new AI-native IDE powered by Gemini 3."
 author: Domenico Tenace
 date: "2026-01-06"
 image:

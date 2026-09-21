@@ -1,5 +1,6 @@
 ---
 title: "Rebuilding domenicotenace.dev: How Pure Astro and CSS Reminded Me That Simple Is Better"
+description: "I rebuilt my personal site using only Astro and vanilla CSS, no frameworks. What I dropped, why, and what it taught me about simplicity."
 author: Domenico Tenace
 date: "2026-03-12"
 image:

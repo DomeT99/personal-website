@@ -1,5 +1,6 @@
 ---
 title: OpenRouter - One API Key to Rule Them All
+description: "Tired of juggling a different API key and billing account for every AI model? OpenRouter gives you access to hundreds of models behind one key."
 author: Domenico Tenace
 date: "2026-08-12"
 image:

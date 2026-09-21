@@ -1,5 +1,6 @@
 ---
 title: "Google AI Studio - The Playground Every Developer Should Know About"
+description: "Google AI Studio lets you experiment with Gemini models, build AI features, and grab an API key without a complex setup. A tour of what it offers."
 author: Domenico Tenace
 date: "2026-06-05"
 image:
