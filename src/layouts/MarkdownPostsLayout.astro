@@ -14,28 +14,40 @@ const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://domenicote
 const url = `${baseUrl}/blog/${entry.id}/`;
 const published = new Date(date).toISOString();
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: title,
-  datePublished: published,
-  dateModified: published,
-  author: {
-    "@type": "Person",
-    name: "Domenico Tenace",
-    url: "https://domenicotenace.dev/",
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    ...(description && { description }),
+    datePublished: published,
+    dateModified: published,
+    author: {
+      "@type": "Person",
+      name: "Domenico Tenace",
+      url: "https://domenicotenace.dev/",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Domenico Tenace",
+      url: "https://domenicotenace.dev/",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    image: image?.url ? `${baseUrl}${image.url}` : `${baseUrl}/images/OG_Image.webp`,
   },
-  publisher: {
-    "@type": "Person",
-    name: "Domenico Tenace",
-    url: "https://domenicotenace.dev/",
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog/` },
+      { "@type": "ListItem", position: 3, name: title, item: url },
+    ],
   },
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": url,
-  },
-  image: image?.url ? `${baseUrl}${image.url}` : `${baseUrl}/images/OG_Image.webp`,
-};
+];
 ---
 
 <BaseLayout

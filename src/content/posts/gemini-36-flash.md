@@ -8,7 +8,7 @@ image:
   alt: "Gemini 3.6 Flash: Google's Fastest Bet in a Crowded Race"
 ---
 
-   <img src="/images/posts/Gemini_36.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Gemini_36.webp" alt="Gemini 3.6 Flash: Google's Fastest Bet in a Crowded Race" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
  
 

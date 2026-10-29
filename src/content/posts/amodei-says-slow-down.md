@@ -8,7 +8,7 @@ image:
   alt: "Amodei Says Slow Down. Should We Believe Him?"
 ---
 
-   <img src="/images/posts/Amodei_Says_Slow_Down.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Amodei_Says_Slow_Down.webp" alt="Amodei Says Slow Down. Should We Believe Him?" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

@@ -8,7 +8,7 @@ image:
   alt: "One Dev, Four Specialists: My Agent Team for OpenCode"
 ---
 
-   <img src="/images/posts/Web_Dev_Agent.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Web_Dev_Agent.webp" alt="One Dev, Four Specialists: My Agent Team for OpenCode" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
    ## Overview
    

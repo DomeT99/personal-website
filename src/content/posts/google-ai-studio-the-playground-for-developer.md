@@ -8,7 +8,7 @@ image:
   alt: "Google AI Studio - The Playground Every Developer Should Know About"
 ---
 
-   <img src="/images/posts/Google_AI_Studio.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Google_AI_Studio.webp" alt="Google AI Studio - The Playground Every Developer Should Know About" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

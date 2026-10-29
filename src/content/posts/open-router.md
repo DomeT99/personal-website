@@ -8,7 +8,7 @@ image:
   alt: "OpenRouter - One API Key to Rule Them All"
 ---
 
-  <img src="/images/posts/Open_Router.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/Open_Router.webp" alt="OpenRouter - One API Key to Rule Them All" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
   # OpenRouter: One API Key to Rule Them All 
   

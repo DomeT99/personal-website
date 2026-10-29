@@ -8,7 +8,7 @@ image:
   alt: "Gemini CLI: Google's Free AI Agent for Your Terminal"
 ---
 
-  <img src="/images/posts/Gemini_Cli_Skills.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/Gemini_Cli_Skills.webp" alt="Gemini CLI Skills: structured guidance for terminal AI agents" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

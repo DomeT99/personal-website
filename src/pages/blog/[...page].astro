@@ -6,70 +6,78 @@ import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/CardPost.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const allPosts = await getCollection("posts");
-  const sortedPosts = allPosts
-  .filter((post) => new Date(post.data.date).valueOf() < new Date().valueOf())
-  .sort(
-    (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
-  );
-  return paginate(sortedPosts, { pageSize: 2 });
+    const allPosts = await getCollection("posts");
+    const sortedPosts = allPosts
+        .filter(
+            (post) => new Date(post.data.date).valueOf() < new Date().valueOf(),
+        )
+        .sort(
+            (a, b) =>
+                new Date(b.data.date).valueOf() -
+                new Date(a.data.date).valueOf(),
+        );
+    return paginate(sortedPosts, { pageSize: 2 });
 }
 
 interface Props {
-  page: Page<CollectionEntry<"posts">>;
+    page: Page<CollectionEntry<"posts">>;
 }
 
 const { page } = Astro.props;
 
 const baseTitle = "Domenico Tenace - Blog";
 const pageTitle =
-  page.currentPage > 1 ? `${baseTitle} - Page ${page.currentPage}` : baseTitle;
+    page.currentPage > 1
+        ? `${baseTitle} - Page ${page.currentPage}`
+        : baseTitle;
 const pageDescription =
-  page.currentPage > 1
-    ? `Blog articles about programming, AI, and developer tools - page ${page.currentPage}`
-    : "I write articles about the technologies I use the most and share my experiences";
+    page.currentPage > 1
+        ? `Blog articles about programming, AI, and developer tools - page ${page.currentPage}`
+        : "I write articles about the technologies I use the most and share my experiences";
 
-const baseUrl = new URL(page.url.first ?? "/blog/", Astro.site ?? "https://domenicotenace.dev").toString();
+const baseUrl = new URL(
+    page.url.first ?? "/blog/",
+    Astro.site ?? "https://domenicotenace.dev",
+).toString();
 const canonicalURL =
-  page.currentPage > 1
-    ? `${baseUrl.replace(/\/$/, "")}/${page.currentPage}/`
-    : baseUrl;
+    page.currentPage > 1
+        ? `${baseUrl.replace(/\/$/, "")}/${page.currentPage}/`
+        : baseUrl;
 ---
 
-<Layout pageTitle={pageTitle} pageDescription={pageDescription} canonicalURL={canonicalURL}>
-  <h1 class="page-title">Blog</h1>
-  <ul role="list" class="link-card-grid">
-    {
-      page.data.map((cardPost) => (
-        <Card
-          url={`/blog/${cardPost.id}/`}
-          image={cardPost.data.image?.url ?? "/images/OG_Image.webp"}
-          title={cardPost.data.title}
-          date={cardPost.data.date}
-        />
-      ))
-    }
-  </ul>
+<Layout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    canonicalURL={canonicalURL}
+>
+    <h1 class="page-title">Blog</h1>
+    <ul role="list" class="link-card-grid">
+        {page.data.map((cardPost) => (
+            <Card
+                url={`/blog/${cardPost.id}/`}
+                image={cardPost.data.image?.url ?? "/images/OG_Image.webp"}
+                title={cardPost.data.title}
+                date={cardPost.data.date}
+            />
+        ))}
+    </ul>
 
-  {
-    (page.url.prev || page.url.next) && (
-      <nav aria-label="Pagination" class="pagination">
-        {page.url.prev ? (
-          <a href={page.url.prev} class="pagination-link">
-            &larr; Past
-          </a>
-        ) : (
-          <span class="pagination-link disabled">&larr; Past</span>
-        )}
-        {page.url.next ? (
-          <a href={page.url.next} class="pagination-link">
-            Next &rarr;
-          </a>
-        ) : (
-          <span class="pagination-link disabled">Next &rarr;</span>
-        )}
-      </nav>
-    )
-  }
+    {(page.url.prev || page.url.next) && (
+        <nav aria-label="Pagination" class="pagination">
+            {page.url.prev ? (
+                <a href={page.url.prev} class="pagination-link">
+                    &larr; Past
+                </a>
+            ) : (
+                <span class="pagination-link disabled">&larr; Past</span>
+            )}
+            {page.url.next ? (
+                <a href={page.url.next} class="pagination-link">
+                    Next &rarr;
+                </a>
+            ) : (
+                <span class="pagination-link disabled">Next &rarr;</span>
+            )}
+        </nav>
+    )}
 </Layout>
-

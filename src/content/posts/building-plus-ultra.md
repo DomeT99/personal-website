@@ -8,7 +8,7 @@ image:
   alt: "Planning vs Fast Mode in Google Antigravity"
 ---
 
-   <img src="/images/posts/Building_Plus_Ultra.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Building_Plus_Ultra.webp" alt="Plus Ultra: Material Design components for Bulma CSS" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

@@ -8,7 +8,7 @@ image:
   alt: "Why I Switched to Mullvad VPN"
 ---
 
-  <img src="/images/posts/Why_I_Switched_To_Mullvad.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/Why_I_Switched_To_Mullvad.webp" alt="Why I Switched to Mullvad VPN" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

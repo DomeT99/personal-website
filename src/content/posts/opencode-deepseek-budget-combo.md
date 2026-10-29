@@ -8,7 +8,7 @@ image:
   alt: "OpenCode + DeepSeek V4: The Budget Combo That Doesn't Feel Like a Budget Combo"
 ---
 
-   <img src="/images/posts/DeepSeek_OpenCode.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/DeepSeek_OpenCode.webp" alt="OpenCode + DeepSeek V4: The Budget Combo That Doesn't Feel Like a Budget Combo" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
  
 ## Overview

@@ -8,7 +8,7 @@ image:
   alt: "Why I Switched to pnpm and Never Looked Back"
 ---
 
-  <img src="/images/posts/Switched_To_pnpm.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/Switched_To_pnpm.webp" alt="Why I Switched to pnpm and Never Looked Back" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

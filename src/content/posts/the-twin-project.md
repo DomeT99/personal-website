@@ -8,7 +8,7 @@ image:
   alt: "SpellBook of Skill:The Twin Project Nobody Asked For, But I Built Anyway"
 ---
 
-  <img src="/images/posts/SpellBook_Of_Skill.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/SpellBook_Of_Skill.webp" alt="SpellBook of Skill: The Twin Project Nobody Asked For, But I Built Anyway" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

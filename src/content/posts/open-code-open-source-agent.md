@@ -8,7 +8,7 @@ image:
   alt: "OpenCode: The Open Source Coding Agent That Doesn't Lock You In"
 ---
 
-   <img src="/images/posts/Open_Code_Agent.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Open_Code_Agent.webp" alt="OpenCode: The Open Source Coding Agent That Doesn't Lock You In" width="1000" height="421" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

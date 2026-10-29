@@ -7,13 +7,13 @@ image:
 github: https://github.com/Domenico-Tenace-Open-Labs
 ---
 
-### Description
+## Description
 
 This project centralizes all my open source repositories in one place, where other developers can find them to get inspiration, improve them, redistribute them, and incorporate them into personal projects.
 
 I also like to think of it as a shared space where people can experiment with new technologies and learn by sharing their experiences.
 
-### Projects
+## Projects
 
 - [App Repo](https://github.com/Domenico-Tenace-Open-Labs/app-repo): simple app storage cloud based, built in Nuxt.
 - [Glif](https://github.com/Domenico-Tenace-Open-Labs/glif): minimalist and intuitive web app for creating and managing QR Codes.

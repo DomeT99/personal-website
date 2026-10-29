@@ -8,7 +8,7 @@ image:
   alt: "Spellbook of Prompt: Your Ultimate Guide to Crafting Effective AI Prompts"
 ---
 
-  <img src="/images/posts/SpellBook_Of_Prompt.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/SpellBook_Of_Prompt.webp" alt="Spellbook of Prompt: Your Ultimate Guide to Crafting Effective AI Prompts" width="1000" height="421" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

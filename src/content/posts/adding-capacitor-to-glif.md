@@ -8,7 +8,7 @@ image:
   alt: "Adding Capacitor to Glif with Antigravity"
 ---
 
-   <img src="/images/posts/Adding_Capacitor_To_Glif.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Adding_Capacitor_To_Glif.webp" alt="Adding Capacitor to Glif with Antigravity" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

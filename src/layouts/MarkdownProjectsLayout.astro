@@ -12,19 +12,30 @@ const frontmatter = entry.data;
 const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://domenicotenace.dev";
 const url = `${baseUrl}/projects/${entry.id}/`;
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareSourceCode",
-  name: frontmatter.title,
-  description: frontmatter.description,
-  author: {
-    "@type": "Person",
-    name: "Domenico Tenace",
-    url: "https://domenicotenace.dev/",
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    name: frontmatter.title,
+    description: frontmatter.description,
+    author: {
+      "@type": "Person",
+      name: "Domenico Tenace",
+      url: "https://domenicotenace.dev/",
+    },
+    ...(frontmatter.github && { codeRepository: frontmatter.github }),
+    ...(frontmatter.website && { url: frontmatter.website }),
   },
-  ...(frontmatter.github && { codeRepository: frontmatter.github }),
-  ...(frontmatter.website && { url: frontmatter.website }),
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${baseUrl}/projects/` },
+      { "@type": "ListItem", position: 3, name: frontmatter.title, item: url },
+    ],
+  },
+];
 ---
 
 <BaseLayout

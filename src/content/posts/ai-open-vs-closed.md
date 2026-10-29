@@ -8,7 +8,7 @@ image:
   alt: "Closed vs Open Source AI: Who Really Owns Your Data?"
 ---
 
-   <img src="/images/posts/AI_Closed_Vs_Open.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/AI_Closed_Vs_Open.webp" alt="Closed vs Open Source AI: Who Really Owns Your Data?" width="1000" height="421" class="post__image" fetchpriority="high" decoding="async">
 
 
    ## Overview

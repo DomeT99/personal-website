@@ -8,7 +8,7 @@ image:
   alt: "How Pure Astro and CSS Reminded Me That Simple Is Better"
 ---
 
-   <img src="/images/posts/Pure_CSS.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Pure_CSS.webp" alt="How Pure Astro and CSS Reminded Me That Simple Is Better" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

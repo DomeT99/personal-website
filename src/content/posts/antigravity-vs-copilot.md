@@ -8,7 +8,7 @@ image:
   alt: "Google Antigravity vs GitHub Copilot"
 ---
 
-  <img src="/images/posts/Antigravity_Vs_Copilot.webp" role="presentation" class="post__image" decoding="async">
+  <img src="/images/posts/Antigravity_Vs_Copilot.webp" alt="Google Antigravity vs GitHub Copilot" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
 ## Overview
 

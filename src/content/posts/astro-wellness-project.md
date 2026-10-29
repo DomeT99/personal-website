@@ -8,7 +8,7 @@ image:
   alt: "Astro Wellness: The First Project Built Start to Finish by My Agent Team"
 ---
 
-   <img src="/images/posts/Astro_Wellness_Project.webp" role="presentation" class="post__image" decoding="async">
+   <img src="/images/posts/Astro_Wellness_Project.webp" alt="Astro Wellness: The First Project Built Start to Finish by My Agent Team" width="1536" height="672" class="post__image" fetchpriority="high" decoding="async">
 
    ## Overview
     
