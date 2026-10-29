@@ -21,6 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 # public folder
-public/convert-to-webp.sh
+scripts/convert-to-webp.sh
 
 AGENTS.original.md

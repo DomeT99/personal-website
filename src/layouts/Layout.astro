@@ -86,8 +86,9 @@ const structuredDataList = structuredData ? (Array.isArray(structuredData) ? str
     <link rel="me" href="https://mastodon.uno/@dvalin99" />
     <link rel="alternate" type="application/rss+xml" title="Domenico Tenace - Blog RSS Feed" href="/rss.xml" />
 
+    {/* Escape "<" so a "</script>" in any field can't break out of the tag — JSON.stringify doesn't escape it. */}
     {structuredDataList.map((data, i) => (
-      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+      <script type="application/ld+json" set:html={JSON.stringify(data).replace(/</g, "\\u003c")} />
     ))}
 
     <script is:inline>
