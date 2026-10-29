@@ -34,10 +34,9 @@ const canonicalURL =
   page.currentPage > 1
     ? `${baseUrl.replace(/\/$/, "")}/${page.currentPage}/`
     : baseUrl;
-const shouldCanonical = page.currentPage > 1;
 ---
 
-<Layout pageTitle={pageTitle} pageDescription={pageDescription} canonicalURL={shouldCanonical ? canonicalURL : undefined}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription} canonicalURL={canonicalURL}>
   <h1 class="page-title">Blog</h1>
   <ul role="list" class="link-card-grid">
     {

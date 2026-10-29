@@ -10,7 +10,10 @@ interface Props {
   ogType?: "website" | "article";
   canonicalURL?: string;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  ogImage?: string;
 }
+
+const DEFAULT_OG_IMAGE = "/images/OG_Image.webp";
 
 const {
   pageTitle = "Domenico Tenace - Software Developer",
@@ -18,11 +21,15 @@ const {
   ogType = "website",
   canonicalURL,
   structuredData,
+  ogImage: ogImagePath = DEFAULT_OG_IMAGE,
 } = Astro.props;
 
 const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://domenicotenace.dev";
-const url = canonicalURL ?? (Astro.url.href ? `${baseUrl}${Astro.url.pathname}` : baseUrl);
-const ogImage = new URL("/images/OG_Image.png", Astro.site ?? baseUrl).toString();
+// Use pathname (not href) so query strings never leak into the canonical URL.
+const url = canonicalURL ?? new URL(Astro.url.pathname, baseUrl).toString();
+const ogImage = new URL(ogImagePath, Astro.site ?? baseUrl).toString();
+// Only the default cover has known dimensions; post covers vary in size.
+const isDefaultOgImage = ogImagePath === DEFAULT_OG_IMAGE;
 
 const structuredDataList = structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [];
 ---
@@ -41,11 +48,17 @@ const structuredDataList = structuredData ? (Array.isArray(structuredData) ? str
 
     <meta name="generator" content={Astro.generator} />
 
-    {canonicalURL && <link rel="canonical" href={url} />}
+    <link rel="canonical" href={url} />
 
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:image" content={ogImage} />
+    {isDefaultOgImage && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
+      </>
+    )}
     <meta property="og:url" content={url} />
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Domenico Tenace" />
@@ -56,7 +69,7 @@ const structuredDataList = structuredData ? (Array.isArray(structuredData) ? str
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImage} />
 
-    <link rel="icon" type="image/svg+xml" href="/images/profile.webp" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
