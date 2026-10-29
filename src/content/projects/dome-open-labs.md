@@ -25,3 +25,4 @@ I also like to think of it as a shared space where people can experiment with ne
 - [Pure Astro](https://github.com/Domenico-Tenace-Open-Labs/pure-astro): an open source blog template build with Astro and pure CSS.
 - [Spellbook of Prompt](https://github.com/Domenico-Tenace-Open-Labs/spellbook-of-prompt): a collection of prompts designed to automate various processes.
 - [Spellbook of Skill](https://github.com/Domenico-Tenace-Open-Labs/spellbook-of-skill): a collection of development skills designed to automate various processes.
+- [Web Dev Agent](https://github.com/Domenico-Tenace-Open-Labs/web-dev-agent): ready-to-use set of OpenCode agents, skills, slash commands and rules for modern frontend development.
