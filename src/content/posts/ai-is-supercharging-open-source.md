@@ -1,6 +1,6 @@
 ---
 title: "I Open-Sourced My Web Developer Agent. AI Is Supercharging Open Source"
-description: "Turning my minimalist QR code generator Glif into a mobile app with Capacitor, and an honest look at what AI-assisted mobile packaging actually takes."
+description: "I published web-dev-agent, my OpenCode web developer agent, on GitHub. Here's what the data says about the loop where AI and open source keep making each other bigger."
 author: Domenico Tenace
 date: "2026-11-02"
 image:
