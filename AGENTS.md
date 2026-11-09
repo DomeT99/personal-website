@@ -2,50 +2,40 @@
 
 ## Project Overview
 
-Personal website + blog, built with **Astro (v5)**. Digital garden for technical articles, project docs, professional portfolio.
+Personal website + blog. Static site, **Astro 7** (`package.json` → `astro@7.3.8`, not v5), [Milky-Way](https://github.com/ttomczak3/Milky-Way) template. Content-driven via Astro Content Collections; deployed at https://domenicotenace.dev.
 
-- **Primary Framework:** [Astro](https://astro.build/)
-- **Template:** [Milky-Way](https://github.com/ttomczak3/Milky-Way)
-- **Deployment URL:** [https://domenicotenace.dev](https://domenicotenace.dev)
-- **Key Features:** SEO-friendly, fast, content-driven via Astro Content Collections.
+## Commands
 
-## Directory Structure
+- `pnpm run dev` — dev server at `http://localhost:4321` (alias: `pnpm start`)
+- `pnpm run build` — static build to `dist/`
+- `pnpm run preview` — serve local production build
 
-- `src/components/`: Reusable Astro components.
-- `src/content/`: Managed content collections (blog posts and projects).
-  - `posts/`: Markdown files for blog articles.
-  - `projects/`: Markdown files for showcased projects.
-- `src/layouts/`: Page layouts (e.g., `Layout.astro`, `MarkdownPostsLayout.astro`).
-- `src/pages/`: File-based routing.
-- `src/styles/`: Global CSS and styling definitions.
-- `public/images/`: Static assets, incl. profile images and content graphics.
+**pnpm only** (lockfile committed; npm/yarn rejected). No test/lint/typecheck scripts — `pnpm run build` only verification gate: validates content-collection schemas, fails on invalid frontmatter.
 
-## Building and Running
+## Content Collections
 
-Standard Astro commands:
+Schema: `src/content.config.ts` (Astro content-layer `glob` loader over `.md`/`.mdx`; files prefixed `_` are ignored).
 
-- **Development:** `pnpm run dev` (Starts local dev server at `http://localhost:4321`)
-- **Build:** `pnpm run build` (Generates production static site in `dist/`)
-- **Preview:** `pnpm run preview` (Previews local production build)
+- **posts** (`src/content/posts/`) — required `title`, `author`, `date` (quoted string, e.g. `"2026-08-12"`); optional `description`, `image`.
+- **projects** (`src/content/projects/`) — required `title`, `description`, `image`; optional `platform`, `stack`, `website`, `github`.
 
-## Development Conventions
+**Gotcha:** `image` is object `{ url, alt }`, NOT path string — `url` = site-root path like `/images/posts/foo.webp`.
 
-### Content Management
+## Images
 
-Uses Astro **Content Collections**. Schema defined in `src/content.config.ts`.
+- Post/project images = **WebP** in `public/images/posts/` and `public/images/projects/`; frontmatter `image.url` points at them.
+- `scripts/convert-to-webp.sh` converts image files to `.webp` (`cwebp` or `ffmpeg`, quality default 85). Run inside target directory; script itself gitignored.
 
-- **Posts:** Required frontmatter `title`, `author`, `date`. Optional `image`.
-- **Projects:** Required frontmatter `title`, `description`, `image`. Optional `platform`, `stack`, `website`, `github`.
+## Routing & Layouts
 
-Ensure frontmatter adheres to schemas to pass type validation.
+- `src/pages/`: `index.astro`, `404.astro`, `projects.astro`, `rss.xml.ts`, dynamic `blog/[...slug].astro`, `blog/[...page].astro` (archive pagination), `projects/[...slug].astro`.
+- `src/layouts/`: `Layout.astro` (base), `MarkdownPostsLayout.astro`, `MarkdownProjectsLayout.astro`. Pages wrap content in layout for consistent metadata.
 
-### Styling
+## Deployment & SEO
 
-- Styles primarily via `src/styles/global.css`.
-- Theme switching (light/dark) via `ThemeIcon` component, persists through `localStorage`.
-- CSS classes use simple naming (e.g., `.navbar`, `.navbar__title`).
+- No platform/CI config in-repo (no netlify.toml, vercel.json, workflows). `site: https://domenicotenace.dev` in `astro.config.mjs` drives sitemap (`@astrojs/sitemap`).
+- Security headers/CSP + caching set in `public/_headers` (static-host convention, e.g. Netlify/Cloudflare Pages). `/images/*` and `/*.webp` cached immutable.
 
-### Components and Layouts
+## Notes
 
-- Split large components into smaller, reusable ones in `src/components/`.
-- All pages wrap content in a layout from `src/layouts/` for consistent structure and metadata.
+- `AGENTS.original.md` = gitignored pre-compression backup — do not edit.
